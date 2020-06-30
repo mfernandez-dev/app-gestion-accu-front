@@ -2,8 +2,9 @@
   <mat-drawer mode="side"
               opened
               class="drawer-container__drawer">
-
-    <app-card-user> </app-card-user>
+    <app-card-usuario></app-card-usuario>
   </mat-drawer>
-
+  <mat-drawer-content class="drawer-container__content">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
 </mat-drawer-container>

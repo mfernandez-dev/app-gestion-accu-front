@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { AsociadosModule } from './asociados/asociados.module';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { AsociadosModule } from './asociados/asociados.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
-    AsociadosModule
+    AsociadosModule,
+    LayoutModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

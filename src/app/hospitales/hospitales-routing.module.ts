@@ -8,14 +8,14 @@ import { PantallaHospitalesComponent } from './components/pantalla-hospitales/pa
 const routes: Routes = [
   {
     path: '',
-    // component: SideBarComponent,
+    component: SideBarComponent,
     children: [
       {
         path: 'hospitales',
         component: PantallaHospitalesComponent,
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];
 
 @NgModule({
