@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { AsociadosModule } from './asociados/asociados.module';
 import { LayoutModule } from './layout/layout.module';
 
+
 @NgModule({
   declarations: [
     AppComponent

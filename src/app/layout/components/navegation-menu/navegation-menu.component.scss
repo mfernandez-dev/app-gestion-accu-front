@@ -1,0 +1,16 @@
+.menunavegacion-container{
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+.menunavegacion-container__button{
+  text-align: start;
+  font-size: 1.5vmin;
+}
+.menunavegacion-container__icon{
+  font-size: 2.2vmin;
+}
+.Active{
+  color: #AA4CE4;
+  background-color: #eeeeee;
+}
