@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Asociado } from '../../models/asociado';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-tabla-info-personal',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabla-info-personal.component.scss']
 })
 export class TablaInfoPersonalComponent implements OnInit {
+
+  @Input() asociado: Asociado;
 
   constructor() { }
 
