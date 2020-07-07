@@ -1,5 +1,4 @@
 import { Asociado } from '../models/asociado';
-import { Direccion } from '../models/direccion';
 
 export let ASOCIADOS: Asociado[] = [
   {
