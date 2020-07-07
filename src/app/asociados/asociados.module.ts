@@ -7,9 +7,10 @@ import { TablaAsociadosComponent } from './components/tabla-asociados/tabla-asoc
 import { MatTableModule } from '@angular/material/table';
 import { BotonNuevoAsociadoComponent } from './components/boton-nuevo-asociado/boton-nuevo-asociado.component';
 import { MatIconModule } from '@angular/material/icon';
+import { PantallaDetallesComponent } from './components/pantalla-detalles/pantalla-detalles.component';
 
 @NgModule({
-  declarations: [PantallaAsociadosComponent, TablaAsociadosComponent, BotonNuevoAsociadoComponent],
+  declarations: [PantallaAsociadosComponent, TablaAsociadosComponent, BotonNuevoAsociadoComponent, PantallaDetallesComponent],
   imports: [
     CommonModule,
     AsociadosRoutingModule,
