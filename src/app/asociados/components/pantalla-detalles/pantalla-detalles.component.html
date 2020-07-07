@@ -1,3 +1,10 @@
+<mat-toolbar class="toolbar-container">
+  <button mat-button
+          class="toolbar-button"
+          routerLink="">
+      <mat-icon>arrow_back</mat-icon>
+  </button>
+</mat-toolbar>
 <app-tabla-info-personal [asociado]="asociado"></app-tabla-info-personal>
 <app-tabla-direccion [direccion]="asociado.direccion"></app-tabla-direccion>
-<app-tabla-datos-bancarios></app-tabla-datos-bancarios>
+<app-tabla-datos-bancarios [datosBancarios]="asociado.datosBancarios"></app-tabla-datos-bancarios>

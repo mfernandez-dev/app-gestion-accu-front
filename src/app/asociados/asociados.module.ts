@@ -12,6 +12,7 @@ import { DetailsButtonComponent } from './components/details-button/details-butt
 import { TablaInfoPersonalComponent } from './components/tabla-info-personal/tabla-info-personal.component';
 import { TablaDireccionComponent } from './components/tabla-direccion/tabla-direccion.component';
 import { TablaDatosBancariosComponent } from './components/tabla-datos-bancarios/tabla-datos-bancarios.component';
+import {MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TablaDatosBancariosComponent } from './components/tabla-datos-bancarios
     CommonModule,
     AsociadosRoutingModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule
   ]
 })
 export class AsociadosModule { }
