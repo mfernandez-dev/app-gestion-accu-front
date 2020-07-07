@@ -8,9 +8,7 @@ import { HospitalesModule } from '../hospitales/hospitales.module';
   declarations: [],
   imports: [
     CommonModule,
-    LayoutModule,
-    AsociadosModule,
-    HospitalesModule
+    LayoutModule
   ],
   exports: []
 })

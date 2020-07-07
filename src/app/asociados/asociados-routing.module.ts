@@ -10,7 +10,7 @@ const routes: Routes =  [
     component: SideBarComponent,
     children: [
       {
-        path: 'asociados',
+        path: '',
         component: PantallaAsociadosComponent,
       },
     ],
