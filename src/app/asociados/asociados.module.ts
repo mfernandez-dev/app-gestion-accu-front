@@ -11,7 +11,13 @@ import { PantallaDetallesComponent } from './components/pantalla-detalles/pantal
 import { DetailsButtonComponent } from './components/details-button/details-button.component';
 
 @NgModule({
-  declarations: [PantallaAsociadosComponent, TablaAsociadosComponent, BotonNuevoAsociadoComponent, PantallaDetallesComponent, DetailsButtonComponent],
+  declarations: [
+    PantallaAsociadosComponent,
+    TablaAsociadosComponent,
+    BotonNuevoAsociadoComponent,
+    PantallaDetallesComponent,
+    DetailsButtonComponent
+  ],
   imports: [
     CommonModule,
     AsociadosRoutingModule,
