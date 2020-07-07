@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Asociado } from '../../models/asociado';
+import { AsociadosService } from '../../services/asociados.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pantalla-detalles',
@@ -8,11 +10,22 @@ import { Asociado } from '../../models/asociado';
 })
 export class PantallaDetallesComponent implements OnInit {
 
-  @Input() asociado: Asociado;
+  public asociado: Asociado;
+  public idAsociado: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private asociadoServ: AsociadosService,
+              private route: ActivatedRoute) {
   }
 
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.idAsociado = String(params.asociadoId);
+      this.getAsociadoById(this.idAsociado);
+    });
+  }
+
+
+  private getAsociadoById(id: string) {
+    this.asociadoServ.getAsociadoById(id).subscribe((asociado) => this.asociado = asociado);
+  }
 }
