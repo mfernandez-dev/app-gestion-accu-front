@@ -2,7 +2,6 @@ import { Component, OnInit, OnChanges, SimpleChanges, ViewChild } from '@angular
 import { AsociadosService } from '../../services/asociados.service';
 import { Asociado } from '../../models/asociado';
 import { MatTableDataSource } from '@angular/material/table';
-// import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-tabla-asociados',
@@ -10,7 +9,6 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./tabla-asociados.component.scss']
 })
 export class TablaAsociadosComponent implements OnInit, OnChanges {
-  // @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   public asociadosList: Asociado[] = [];
   public displayedColumns: string[] = ['nombre', 'apellidos', 'dni', 'fechaNacimiento', 'fechaAlta'];
@@ -22,7 +20,6 @@ export class TablaAsociadosComponent implements OnInit, OnChanges {
     this.getAsociados();
     console.log(this.asociadosList);
     this.dataSource = new MatTableDataSource<Asociado>(this.asociadosList);
-    // this.dataSource.sort = this.sort;
   }
 
   ngOnChanges(changes: SimpleChanges): void {
