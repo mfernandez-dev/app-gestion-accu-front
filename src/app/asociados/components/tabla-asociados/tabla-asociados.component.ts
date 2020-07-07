@@ -11,7 +11,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class TablaAsociadosComponent implements OnInit, OnChanges {
 
   public asociadosList: Asociado[] = [];
-  public displayedColumns: string[] = ['nombre', 'apellidos', 'dni', 'fechaNacimiento', 'fechaAlta'];
+  public displayedColumns: string[] = ['nombre', 'apellidos', 'dni', 'fechaNacimiento', 'fechaAlta', 'details'];
   public dataSource: MatTableDataSource<Asociado>;
 
   constructor( private asociadoService: AsociadosService) { }
