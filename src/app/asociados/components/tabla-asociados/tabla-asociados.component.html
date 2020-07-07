@@ -1,1 +1,30 @@
 <p>tabla-asociados works!</p>
+<table mat-table [dataSource]="dataSource" class="container-table">
+  <ng-container matColumnDef="nombre">
+    <td mat-cell *matCellDef="let element">
+      {{element.nombre}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="apellidos">
+    <td mat-cell *matCellDef="let element">
+      {{element.apellido1}} {{element.apellido2}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="dni">
+    <td mat-cell *matCellDef="let element">
+      {{element.dni}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="fechaNacimiento">
+    <td mat-cell *matCellDef="let element">
+      {{element.fechaNacimiento}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="fechaAlta">
+    <td mat-cell *matCellDef="let element">
+      {{element.fechaAlta}}
+    </td>
+  </ng-container>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="container-table__fila">
+  </tr>
+</table>
