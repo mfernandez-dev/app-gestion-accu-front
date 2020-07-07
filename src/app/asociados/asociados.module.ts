@@ -5,10 +5,11 @@ import { AsociadosRoutingModule } from './asociados-routing.module';
 import { PantallaAsociadosComponent } from './components/pantalla-asociados/pantalla-asociados.component';
 import { TablaAsociadosComponent } from './components/tabla-asociados/tabla-asociados.component';
 import { MatTableModule } from '@angular/material/table';
+import { BotonNuevoAsociadoComponent } from './components/boton-nuevo-asociado/boton-nuevo-asociado.component';
 
 
 @NgModule({
-  declarations: [PantallaAsociadosComponent, TablaAsociadosComponent],
+  declarations: [PantallaAsociadosComponent, TablaAsociadosComponent, BotonNuevoAsociadoComponent],
   imports: [
     CommonModule,
     AsociadosRoutingModule,
