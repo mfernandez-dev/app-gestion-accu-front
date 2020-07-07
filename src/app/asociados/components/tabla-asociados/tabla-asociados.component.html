@@ -33,9 +33,7 @@
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let asociado">
 
-      <button mat-icon-button class="details-button" routerLink="">
-        <mat-icon class="menunavegacion-container__icon">visibility</mat-icon>
-      </button>
+      <app-details-button [asociadoId]="asociado.asociadoId"></app-details-button>
 
     </td>
   </ng-container>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Asociado } from '../../models/asociado';
 
 @Component({
   selector: 'app-pantalla-detalles',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pantalla-detalles.component.scss']
 })
 export class PantallaDetallesComponent implements OnInit {
+
+  @Input() asociado: Asociado;
 
   constructor() { }
 
