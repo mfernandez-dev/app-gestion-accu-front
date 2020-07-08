@@ -11,7 +11,7 @@ import { HospitalesService } from '../../services/hospitales.service';
 export class TablaHospitalesComponent implements OnInit, OnChanges{
 
   public hospitalList: Hospital[] = [];
-  public displayedColumns: string[] = ['abreviatura', 'nombreHospital'];
+  public displayedColumns: string[] = ['abreviatura', 'nombreHospital', 'details'];
   public dataSource: MatTableDataSource<Hospital>;
 
   constructor(private hospitalService: HospitalesService) { }
