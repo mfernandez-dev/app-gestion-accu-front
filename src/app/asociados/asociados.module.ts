@@ -13,6 +13,7 @@ import { TablaInfoPersonalComponent } from './components/tabla-info-personal/tab
 import { TablaDireccionComponent } from './components/tabla-direccion/tabla-direccion.component';
 import { TablaDatosBancariosComponent } from './components/tabla-datos-bancarios/tabla-datos-bancarios.component';
 import {MatToolbarModule } from '@angular/material/toolbar';
+import { HistorialPagosComponent } from './components/historial-pagos/historial-pagos.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {MatToolbarModule } from '@angular/material/toolbar';
     DetailsButtonComponent,
     TablaInfoPersonalComponent,
     TablaDireccionComponent,
-    TablaDatosBancariosComponent
+    TablaDatosBancariosComponent,
+    HistorialPagosComponent
   ],
   imports: [
     CommonModule,
