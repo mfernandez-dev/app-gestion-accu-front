@@ -7,10 +7,11 @@ import { TablaHospitalesComponent } from './components/tabla-hospitales/tabla-ho
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { BotonDetallesHospitalComponent } from './components/boton-detalles-hospital/boton-detalles-hospital.component';
 
 
 @NgModule({
-  declarations: [PantallaHospitalesComponent, TablaHospitalesComponent],
+  declarations: [PantallaHospitalesComponent, TablaHospitalesComponent, BotonDetallesHospitalComponent],
   imports: [
     CommonModule,
     HospitalesRoutingModule,
