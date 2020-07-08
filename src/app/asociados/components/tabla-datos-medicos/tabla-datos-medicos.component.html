@@ -1,1 +1,17 @@
-<p>tabla-datos-medicos works!</p>
+<div *ngIf="datosMedicos?.paciente">
+  <h1>Datos Medicos</h1>
+  <div class="table-container">
+    <div class="row-container">
+      <span class="title">Patologia</span>
+      <span class="element">{{datosMedicos?.enfermedad}}</span>
+    </div>
+    <div class="row-container">
+      <span class="title">DNI</span>
+      <span class="element">{{datosMedicos?.fechaDiagnostico}}</span>
+    </div>
+    <div class="row-container">
+      <span class="title">Tratamiento</span>
+      <span class="element">{{datosMedicos?.tratamiento}}</span>
+    </div>
+  </div>
+</div>

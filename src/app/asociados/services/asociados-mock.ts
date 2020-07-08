@@ -166,10 +166,10 @@ export let ASOCIADOS: Asociado[] = [
       pais: 'Espana'
     },
     datosMedicos: {
-      enfermedad: 'Crohn',
+      enfermedad: '',
       fechaDiagnostico: new Date('December 17, 1995 03:24:00'),
-      paciente: true,
-      tratamiento: 'Biologico'
+      paciente: false,
+      tratamiento: ''
     }
   }
 ];

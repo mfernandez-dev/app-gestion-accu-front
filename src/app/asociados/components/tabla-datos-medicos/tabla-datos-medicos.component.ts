@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DatosMedicos } from '../../models/datosMedicos';
 
 @Component({
   selector: 'app-tabla-datos-medicos',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabla-datos-medicos.component.scss']
 })
 export class TablaDatosMedicosComponent implements OnInit {
+
+  @Input() datosMedicos: DatosMedicos;
 
   constructor() { }
 

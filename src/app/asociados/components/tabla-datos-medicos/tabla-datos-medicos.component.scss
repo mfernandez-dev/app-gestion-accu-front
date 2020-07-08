@@ -1,0 +1,30 @@
+.table-container{
+  border:1px solid black;
+  margin:2%;
+  margin-top: 1%;
+  display: flex;
+  border: round($number: 13);
+  border-radius: 8px;
+  width: 40vw;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  padding-bottom: 2px;
+  padding-top: 2px;
+  border-bottom: 1px solid black;
+}
+
+.element {
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+h1{
+  margin-left: 2%;
+}
