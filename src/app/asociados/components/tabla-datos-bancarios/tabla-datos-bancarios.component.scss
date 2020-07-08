@@ -1,6 +1,11 @@
+.display-container{
+  display: flex;
+  margin: 2%;
+  }
+
 .table-container{
   border:1px solid black;
-  margin: 2%;
+  margin-bottom: 1%;
   display: flex;
   border: round($number: 13);
   border-radius: 8px;
@@ -22,3 +27,13 @@
   padding-bottom: 4px;
   padding-top: 4px;
 }
+
+.info-container{
+  width: 30vw;
+}
+.historial-container{
+  padding-left: 1%;
+  width: 100%;
+
+}
+
