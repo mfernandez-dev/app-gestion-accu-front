@@ -14,6 +14,7 @@ import { TablaDireccionComponent } from './components/tabla-direccion/tabla-dire
 import { TablaDatosBancariosComponent } from './components/tabla-datos-bancarios/tabla-datos-bancarios.component';
 import {MatToolbarModule } from '@angular/material/toolbar';
 import { HistorialPagosComponent } from './components/historial-pagos/historial-pagos.component';
+import { TablaDatosMedicosComponent } from './components/tabla-datos-medicos/tabla-datos-medicos.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HistorialPagosComponent } from './components/historial-pagos/historial-
     TablaInfoPersonalComponent,
     TablaDireccionComponent,
     TablaDatosBancariosComponent,
-    HistorialPagosComponent
+    HistorialPagosComponent,
+    TablaDatosMedicosComponent
   ],
   imports: [
     CommonModule,
