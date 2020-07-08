@@ -1,15 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Hospital } from '../../models/hospital';
+import { MatTableDataSource } from '@angular/material/table';
+import { HospitalesService } from '../../services/hospitales.service';
 
 @Component({
   selector: 'app-tabla-hospitales',
   templateUrl: './tabla-hospitales.component.html',
   styleUrls: ['./tabla-hospitales.component.scss']
 })
-export class TablaHospitalesComponent implements OnInit {
+export class TablaHospitalesComponent implements OnInit, OnChanges{
 
-  constructor() { }
+  public hospitalList: Hospital[] = [];
+  public displayedColumns: string[] = ['abreviatura', 'nombreHospital'];
+  public dataSource: MatTableDataSource<Hospital>;
+
+  constructor(private hospitalService: HospitalesService) { }
 
   ngOnInit(): void {
+    this.getHospitales();
+    this.dataSource = new MatTableDataSource<Hospital>(this.hospitalList);
   }
 
+  ngOnChanges(changes: SimpleChanges): void{
+    this.dataSource = new MatTableDataSource<Hospital>(this.hospitalList);
+
+  }
+
+  public getHospitales() {
+    this.hospitalService.getHospitalesList().subscribe((hospitales) => {
+      this.hospitalList = hospitales;
+    });
+  }
 }
