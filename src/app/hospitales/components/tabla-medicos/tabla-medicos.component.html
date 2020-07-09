@@ -1,1 +1,34 @@
-<p>tabla-medicos works!</p>
+<table mat-table [dataSource]="dataSource" class="container-table mat-elevation-z8">
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+    <td mat-cell *matCellDef="let medico">
+      {{medico.nombreCompleto}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="consulta">
+    <th mat-header-cell *matHeaderCellDef>Consulta</th>
+    <td mat-cell *matCellDef="let medico">
+      {{medico.consulta}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let medico">
+      {{medico.email}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="tlf">
+    <th mat-header-cell *matHeaderCellDef>Telefono</th>
+    <td mat-cell *matCellDef="let medico">
+      {{medico.tlfContacto}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="especialidad">
+    <th mat-header-cell *matHeaderCellDef>Especialidad</th>
+    <td mat-cell *matCellDef="let medico">
+      {{medico.especialidad}}
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
