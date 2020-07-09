@@ -18,17 +18,14 @@ export class TablaHospitalesComponent implements OnInit, OnChanges{
 
   ngOnInit(): void {
     this.getHospitales();
-    this.dataSource = new MatTableDataSource<Hospital>(this.hospitalList);
   }
 
   ngOnChanges(changes: SimpleChanges): void{
-    this.dataSource = new MatTableDataSource<Hospital>(this.hospitalList);
-
   }
 
   public getHospitales() {
     this.hospitalService.getHospitalesList().subscribe((hospitales) => {
-      this.hospitalList = hospitales;
+      this.dataSource = new MatTableDataSource<Hospital>(hospitales);
     });
   }
 }

@@ -14,17 +14,11 @@ export class AsociadosService {
   constructor(private http: HttpClient) { }
 
   getAsociadosList(): Observable<any> {
-    // return of(ASOCIADOS);
     return this.http.get('http://localhost:8080/asociados');
   }
 
-  getAsociadoById(idAsociado: string): Observable<Asociado> {
-    return of(ASOCIADOS).pipe(
-      delay(2000),
-      map(datos => {
-        const asociados = datos.filter(asociado => asociado.asociadoId === idAsociado);
-        return asociados[0];
-      })
-    );
+  getAsociadoById(idAsociado: string): Observable<any> {
+
+    return this.http.get(`http://localhost:8080/asociado/${idAsociado}`);
   }
 }

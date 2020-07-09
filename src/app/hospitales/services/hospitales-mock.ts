@@ -2,7 +2,7 @@ import { Hospital } from '../models/hospital';
 
 export let HOSPITALES: Hospital[] = [
   {
-    id: 'abcdx321',
+    hospitalId: 'abcdx321',
     nombreHospital: 'Centro Hospitalario Universitario A Coruna',
     abreviatura: 'CHUAC',
     especialistas: [
@@ -23,7 +23,7 @@ export let HOSPITALES: Hospital[] = [
     ]
   },
   {
-    id: 'abcdx322',
+    hospitalId: 'abcdx322',
     nombreHospital: 'Hospital Universitario Lucus Augusti',
     abreviatura: 'HULA',
     especialistas: [
