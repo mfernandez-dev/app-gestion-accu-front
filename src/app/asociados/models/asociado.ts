@@ -10,7 +10,7 @@ export class Asociado {
   fechaNacimiento: Date;
   dni: string;
   fechaAlta: Date;
-  fechaBaja: Date;
+  fechaBaja: string;
   datosBancarios: DatosBancarios;
   direccion: Direccion;
   datosMedicos: DatosMedicos;

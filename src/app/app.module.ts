@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { AsociadosModule } from './asociados/asociados.module';
 import { LayoutModule } from './layout/layout.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LayoutModule } from './layout/layout.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CoreModule
+    CoreModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

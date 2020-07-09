@@ -10,7 +10,6 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class TablaAsociadosComponent implements OnInit, OnChanges {
 
-  public asociadosList: Asociado[] = [];
   public displayedColumns: string[] = ['nombre', 'apellidos', 'dni', 'fechaNacimiento', 'fechaAlta', 'details'];
   public dataSource: MatTableDataSource<Asociado>;
 
@@ -18,17 +17,16 @@ export class TablaAsociadosComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.getAsociados();
-    console.log(this.asociadosList);
-    this.dataSource = new MatTableDataSource<Asociado>(this.asociadosList);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.dataSource = new MatTableDataSource<Asociado>(this.asociadosList);
+
   }
 
   public getAsociados() {
-    this.asociadoService.getAsociadosList().subscribe((asociados) => {
-      this.asociadosList = asociados;
+    this.asociadoService.getAsociadosList().subscribe((asociados: Asociado[]) => {
+      console.log(asociados);
+      this.dataSource = new MatTableDataSource<Asociado>(asociados);
     });
   }
 

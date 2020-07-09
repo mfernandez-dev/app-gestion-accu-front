@@ -9,7 +9,7 @@ export let ASOCIADOS: Asociado[] = [
     fechaNacimiento: new Date('December 17, 1995 03:24:00'),
     dni: '1234556789M',
     fechaAlta: new Date('December 17, 1995 03:24:00'),
-    fechaBaja: new Date('December 17, 1995 03:24:00'),
+    fechaBaja: '',
     datosBancarios: {
       iban: 'ES00 0000 0000 0000 0000',
       titular: 'Miguel Fernandez',
@@ -66,7 +66,7 @@ export let ASOCIADOS: Asociado[] = [
     fechaNacimiento: new Date('December 17, 1995 03:24:00'),
     dni: '1234556789M',
     fechaAlta: new Date('December 17, 1995 03:24:00'),
-    fechaBaja: new Date('December 17, 1995 03:24:00'),
+    fechaBaja: '',
     datosBancarios: {
       iban: 'ES00 0000 0000 0000 0000',
       titular: 'Miguel Fernandez',
@@ -123,7 +123,7 @@ export let ASOCIADOS: Asociado[] = [
     fechaNacimiento: new Date('December 17, 1995 03:24:00'),
     dni: '1234556789M',
     fechaAlta: new Date('December 17, 1995 03:24:00'),
-    fechaBaja: new Date('December 17, 1995 03:24:00'),
+    fechaBaja: '',
     datosBancarios: {
       iban: 'ES00 0000 0000 0000 0000',
       titular: 'Miguel Fernandez',
