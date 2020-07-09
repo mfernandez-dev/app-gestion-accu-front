@@ -9,10 +9,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BotonDetallesHospitalComponent } from './components/boton-detalles-hospital/boton-detalles-hospital.component';
 import { PantallaDetalleHospitalComponent } from './components/pantalla-detalle-hospital/pantalla-detalle-hospital.component';
+import { TablaMedicosComponent } from './components/tabla-medicos/tabla-medicos.component';
 
 
 @NgModule({
-  declarations: [PantallaHospitalesComponent, TablaHospitalesComponent, BotonDetallesHospitalComponent, PantallaDetalleHospitalComponent],
+  declarations: [PantallaHospitalesComponent, TablaHospitalesComponent, BotonDetallesHospitalComponent, PantallaDetalleHospitalComponent, TablaMedicosComponent],
   imports: [
     CommonModule,
     HospitalesRoutingModule,
