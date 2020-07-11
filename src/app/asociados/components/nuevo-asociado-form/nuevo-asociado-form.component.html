@@ -1,0 +1,149 @@
+<mat-horizontal-stepper #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Datos Personales</ng-template>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Nombre" formControlName="nombre" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Apellido 1</mat-label>
+        <input matInput placeholder="Apellido 1" formControlName="apellido1" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Apellido 2</mat-label>
+        <input matInput placeholder="Apellido 2" formControlName="apellido2" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>DNI</mat-label>
+        <input matInput placeholder="DNI" formControlName="dni" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Fecha Nacimiento</mat-label>
+        <input matInput placeholder="Fecha nacimiento" formControlName="fechaNacimiento" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Direccion</ng-template>
+      <mat-form-field>
+        <mat-label>calle</mat-label>
+        <input matInput formControlName="calle" placeholder="Calle ejemplo" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Numero</mat-label>
+        <input matInput formControlName="numero" placeholder="1" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Portal</mat-label>
+        <input matInput formControlName="portal" placeholder="A" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Piso</mat-label>
+        <input matInput formControlName="piso" placeholder="1" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Letra</mat-label>
+        <input matInput formControlName="letra" placeholder="A" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Localidad</mat-label>
+        <input matInput formControlName="localidad" placeholder="Localidad" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Provincia</mat-label>
+        <input matInput formControlName="provincia" placeholder="Provincia" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Pais</mat-label>
+        <input matInput formControlName="pais" placeholder="Pais" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>CodigoPostal</mat-label>
+        <input matInput formControlName="codigoPostal" placeholder="Ex. 1 Main St, New York, NY" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Datos Medicos</ng-template>
+      <mat-form-field>
+        <mat-label>Paciente</mat-label>
+        <input matInput placeholder="false" formControlName="paciente" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Patologia</mat-label>
+        <input matInput placeholder="Crohn" formControlName="patologia" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Fecha Diagnostico</mat-label>
+        <input matInput placeholder="10-02-1993" formControlName="fechaDiagnostico" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Tratamiento</mat-label>
+        <input matInput placeholder="Tratamiento" formControlName="tratamiento" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Hospital</mat-label>
+        <input matInput placeholder="Hospital" formControlName="hospital" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Doctor</mat-label>
+        <input matInput placeholder="Doctor" formControlName="doctor" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="fourthFormGroup">
+    <form [formGroup]="fourthFormGroup">
+      <ng-template matStepLabel>Facturacion</ng-template>
+      <mat-form-field>
+        <mat-label>Titular de la cuenta</mat-label>
+        <input matInput placeholder="Nombre Apellido" formControlName="titularCuenta" required>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>IBAN</mat-label>
+        <input matInput placeholder="ES00 0000 0000 0000 0000" formControlName="iban" required>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>Forma Pago</mat-label>
+        <input matInput placeholder="ES00 0000 0000 0000 0000" formControlName="formaPago" required>
+      </mat-form-field>
+
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

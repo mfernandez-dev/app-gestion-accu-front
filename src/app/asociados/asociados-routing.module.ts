@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PantallaAsociadosComponent } from './components/pantalla-asociados/pantalla-asociados.component';
 import { SideBarComponent } from '../layout/components/side-bar/side-bar.component';
 import { PantallaDetallesComponent } from './components/pantalla-detalles/pantalla-detalles.component';
+import { PantallaNuevoAsociadoComponent } from './components/pantalla-nuevo-asociado/pantalla-nuevo-asociado.component';
 
 
 const routes: Routes =  [
@@ -19,6 +20,10 @@ const routes: Routes =  [
   {
     path: 'details/:asociadoId',
     component: PantallaDetallesComponent,
+  },
+  {
+    path: 'newAsociado',
+    component: PantallaNuevoAsociadoComponent,
   },
 ];
 

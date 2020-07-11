@@ -15,6 +15,12 @@ import { TablaDatosBancariosComponent } from './components/tabla-datos-bancarios
 import {MatToolbarModule } from '@angular/material/toolbar';
 import { HistorialPagosComponent } from './components/historial-pagos/historial-pagos.component';
 import { TablaDatosMedicosComponent } from './components/tabla-datos-medicos/tabla-datos-medicos.component';
+import { PantallaNuevoAsociadoComponent } from './components/pantalla-nuevo-asociado/pantalla-nuevo-asociado.component';
+import { NuevoAsociadoFormComponent } from './components/nuevo-asociado-form/nuevo-asociado-form.component';
+import { MatStepperModule} from '@angular/material/stepper';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import {ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -27,14 +33,20 @@ import { TablaDatosMedicosComponent } from './components/tabla-datos-medicos/tab
     TablaDireccionComponent,
     TablaDatosBancariosComponent,
     HistorialPagosComponent,
-    TablaDatosMedicosComponent
+    TablaDatosMedicosComponent,
+    PantallaNuevoAsociadoComponent,
+    NuevoAsociadoFormComponent
   ],
   imports: [
     CommonModule,
     AsociadosRoutingModule,
     MatTableModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule
   ]
 })
 export class AsociadosModule { }
