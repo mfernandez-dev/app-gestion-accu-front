@@ -1,107 +1,116 @@
 
-<form [formGroup]="formularioEdicion">
-  <div>
+<form [formGroup]="formularioEdicion" (ngSubmit)="updateAsociado()" class="form-container">
+  <div class="group-1">
     <mat-form-field>
       <mat-label>Nombre</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="nombre">
+      <input matInput placeholder="Nombre" formControlName="nombre" required>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Primer apellido</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="apellido1">
+      <input matInput placeholder="Primer apellido" formControlName="apellido1" required>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Segundo apellido</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="apellido2">
+      <input matInput placeholder="Segundo apellido" formControlName="apellido2">
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>DNI</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="dni">
+      <input matInput placeholder="DNI" formControlName="dni" required>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Fecha Nacimiento</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="fechaNacimiento">
+      <input matInput [matDatepicker]="picker" placeholder="Fecha nacimiento" formControlName="fechaNacimiento" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Fecha Alta</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="fechaAlta">
+      <input matInput [matDatepicker]="picker3" placeholder="Fecha Alta" formControlName="fechaAlta" required>
+      <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+      <mat-datepicker #picker3></mat-datepicker>
     </mat-form-field>
   </div>
-  <div>
-    <mat-form-field>
+  <div class="group-2">
+    <mat-form-field id="calle">
       <mat-label>Calle</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="calle">
+      <input matInput placeholder="Calle" formControlName="calle"required>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Numero</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="numero">
+      <input matInput placeholder="Numero" formControlName="numero">
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Portal</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="portal">
+      <input matInput placeholder="Portal" formControlName="portal">
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Piso</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="piso">
+      <input matInput placeholder="Piso" formControlName="piso">
     </mat-form-field>
     <mat-form-field>
       <mat-label>Puerta</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="puerta">
+      <input matInput placeholder="Puerta" formControlName="puerta">
     </mat-form-field>
     <mat-form-field>
       <mat-label>Localidad</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="localidad">
+      <input matInput placeholder="Localidad" formControlName="localidad" required>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Porvincia</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="provincia">
+      <input matInput placeholder="Provincia" formControlName="provincia" required>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Pais</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="pais">
+      <input matInput placeholder="Pais" formControlName="pais" required>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Codigo Postal</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="codigoPostal">
+      <input matInput placeholder="Codigo Postal" formControlName="codigoPostal" required>
     </mat-form-field>
   </div>
-  <div>
+  <div class="group-3">
     <mat-form-field>
       <mat-label>Titular</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="titular">
+      <input matInput placeholder="Titular de cuenta" formControlName="titular" required>
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Modalidad Pago</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="modalidadPago">
+      <mat-label>Forma Pago</mat-label>
+      <mat-select formControlName="modalidadPago" required>
+        <mat-option value="anual">Anual</mat-option>
+        <mat-option value="mensual">Mensual</mat-option>
+      </mat-select>
     </mat-form-field>
     <mat-form-field>
       <mat-label>IBAN</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="iban">
+      <input matInput placeholder="IBAN" formControlName="iban" required>
     </mat-form-field>
-  </div><div>
+  </div><div class="group-4">
     <mat-form-field>
       <mat-label>Patologia</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="patologia">
+      <input matInput placeholder="Patologia" formControlName="patologia">
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Fecha diagnostio</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="fechaDiagnostico">
+      <mat-label>Fecha Diagnostico</mat-label>
+      <input matInput [matDatepicker]="picker2" placeholder="Fecha Diagnostico" formControlName="fechaDiagnostico">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
     </mat-form-field>
     <mat-form-field>
-      <mat-label>tratamiento</mat-label>
-      <input matInput placeholder="Just a placeholder" formControlName="tratamiento">
+      <mat-label>Tratamiento</mat-label>
+      <input matInput placeholder="Tratamiento" formControlName="tratamiento">
     </mat-form-field>
   </div>
-  <div>
-    <button mat-button class="button_back">Back</button>
-    <button mat-button class="button_next" type="button" routerLink='/asociados'>Submit</button>
+  <div class="buttons-group">
+    <button mat-button class="button_back" routerLink='/asociados/details/{{asociado?.asociadoId}}'>Cancel</button>
+    <button mat-button class="button_next" type="submit" routerLink='/asociados'>Submit</button>
   </div>
 </form>
 

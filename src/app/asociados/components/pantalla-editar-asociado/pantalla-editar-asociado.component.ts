@@ -10,7 +10,7 @@ import { Asociado } from '../../models/asociado';
 })
 export class PantallaEditarAsociadoComponent implements OnInit {
 
-  private idAsociado: string;
+  public idAsociado: string;
   public asociado: Asociado;
 
   constructor(private asociadoServ: AsociadosService,
