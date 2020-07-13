@@ -25,4 +25,8 @@ export class AsociadosService {
   postNewAsociado(asociado: Asociado): Observable<Object> {
     return this.http.post('http://localhost:8080/asociados/newAsociado', asociado);
   }
+
+  updateAsociado(idAsociado: string, value: any): Observable<Object> {
+    return this.http.put(`http://localhost:8080/asociados/${idAsociado}`, value);
+  }
 }

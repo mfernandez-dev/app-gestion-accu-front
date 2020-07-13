@@ -15,3 +15,28 @@
   margin-top: 1%;
 }
 
+.buttons_container{
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+
+
+  .edit-button{
+    width: unset;
+    padding: 8px 26px;
+    border-radius: 6px;
+    background-color: #AA4CE4;
+    margin: 3px;
+    border: none;
+    color: white;
+  }
+  .delete-button{
+    width: unset;
+    padding: 8px 26px;
+    border-radius: 6px;
+    background-color: rgb(182, 0, 0);
+    margin: 3px;
+    border: none;
+    color:white
+  }
+}

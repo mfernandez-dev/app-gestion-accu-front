@@ -27,6 +27,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { PantallaEditarAsociadoComponent } from './components/pantalla-editar-asociado/pantalla-editar-asociado.component';
 import { EditAsociadoFormComponent } from './components/edit-asociado-form/edit-asociado-form.component';
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { EditAsociadoFormComponent } from './components/edit-asociado-form/edit-
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule
   ]
 })
 export class AsociadosModule { }
