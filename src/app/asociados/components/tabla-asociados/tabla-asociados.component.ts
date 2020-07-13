@@ -20,6 +20,7 @@ export class TablaAsociadosComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    this.getAsociados();
 
   }
 

@@ -135,7 +135,7 @@
       <br/>
       <mat-form-field>
         <mat-label>Forma Pago</mat-label>
-        <input matInput placeholder="ES00 0000 0000 0000 0000" formControlName="formaPago" required>
+        <input matInput placeholder="modPago" formControlName="modalidadPago" required>
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>
@@ -149,7 +149,7 @@
     <p>You are now done.</p>
     <div>
       <button mat-button matStepperPrevious>Back</button>
-      <button mat-button  type="button" (click)="setAsociado()">Submit</button>
+      <button mat-button  type="button" (click)="saveAsociado()" routerLink='/asociados'>Submit</button>
     </div>
   </mat-step>
 </mat-horizontal-stepper>

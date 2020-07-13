@@ -4,6 +4,7 @@ import { Asociado } from '../../models/asociado';
 import { Direccion } from '../../models/direccion';
 import { DatosMedicos } from '../../models/datosMedicos';
 import { DatosBancarios } from '../../models/datosBancarios';
+import { AsociadosService } from '../../services/asociados.service';
 
 @Component({
   selector: 'app-nuevo-asociado-form',
@@ -18,7 +19,8 @@ export class NuevoAsociadoFormComponent implements OnInit {
   thirdFormGroup: FormGroup;
   fourthFormGroup: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private asociadoServ: AsociadosService) { }
 
   ngOnInit(): void {
     this.firstFormGroup = this.formBuilder.group({
@@ -44,19 +46,22 @@ export class NuevoAsociadoFormComponent implements OnInit {
       paciente: ['', Validators.required],
       patologia: ['', Validators.required],
       fechaDiagnostico: ['', Validators.required],
-      tratamiento: ['', Validators.required],
-      hospital: ['', Validators.required],
-      doctor: ['', Validators.required],
+      tratamiento: ['', Validators.required]
     });
     this.fourthFormGroup = this.formBuilder.group({
       titularCuenta: ['', Validators.required],
       iban: ['', Validators.required],
-      formaPago: ['', Validators.required],
+      modalidadPago: ['', Validators.required],
 
     });
   }
 
-  setAsociado(){
+  saveAsociado(){
+    this.asociadoServ.postNewAsociado(this.setAsociado())
+      .subscribe(data => console.log(data), error => console.log(error));
+  }
+
+  setAsociado(): Asociado{
 
     const newAsociado = new Asociado();
 
@@ -67,10 +72,12 @@ export class NuevoAsociadoFormComponent implements OnInit {
       newAsociado.dni = this.firstFormGroup.value.dni;
       newAsociado.fechaNacimiento = this.firstFormGroup.value.fechaNacimiento;
       newAsociado.fechaAlta = this.firstFormGroup.value.fechaAlta;
+      newAsociado.fechaBaja = '';
       newAsociado.direccion = this.setDireccion();
       newAsociado.datosMedicos = this.setDatosMedicos();
       newAsociado.datosBancarios = this.setDatosBancarios();
       console.log(newAsociado);
+      return newAsociado;
     }
   }
 
@@ -84,7 +91,8 @@ export class NuevoAsociadoFormComponent implements OnInit {
     direccion.letra = this.secondFormGroup.value.letra;
     direccion.localidad = this.secondFormGroup.value.localidad;
     direccion.provincia = this.secondFormGroup.value.provincia;
-    direccion.pais = this.secondFormGroup.value.codigoPostal;
+    direccion.pais = this.secondFormGroup.value.pais;
+    direccion.codigoPostal = this.secondFormGroup.value.codigoPostal;
 
     return direccion;
   }
@@ -103,7 +111,7 @@ export class NuevoAsociadoFormComponent implements OnInit {
   setDatosBancarios(): DatosBancarios {
     const datosBancarios = new DatosBancarios();
 
-    datosBancarios.titular = this.fourthFormGroup.value.titular;
+    datosBancarios.titular = this.fourthFormGroup.value.titularCuenta;
     datosBancarios.iban = this.fourthFormGroup.value.iban;
     datosBancarios.modalidadPago = this.fourthFormGroup.value.modalidadPago;
     datosBancarios.direccionFacturacion = this.setDireccion();

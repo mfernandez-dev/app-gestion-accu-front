@@ -21,4 +21,8 @@ export class AsociadosService {
 
     return this.http.get(`http://localhost:8080/asociado/${idAsociado}`);
   }
+
+  postNewAsociado(asociado: Asociado): Observable<Object> {
+    return this.http.post('http://localhost:8080/asociados/newAsociado', asociado);
+  }
 }
