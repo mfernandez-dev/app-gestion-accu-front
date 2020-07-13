@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Asociado } from '../../models/asociado';
+import { Direccion } from '../../models/direccion';
+import { DatosMedicos } from '../../models/datosMedicos';
+import { DatosBancarios } from '../../models/datosBancarios';
 
 @Component({
   selector: 'app-nuevo-asociado-form',
@@ -22,7 +26,8 @@ export class NuevoAsociadoFormComponent implements OnInit {
       apellido1: ['', Validators.required],
       apellido2: ['', Validators.required],
       dni: ['', Validators.required],
-      fechaNacimiento: ['', Validators.required]
+      fechaNacimiento: ['', Validators.required],
+      fechaAlta: ['', Validators.required]
     });
     this.secondFormGroup = this.formBuilder.group({
       calle: ['', Validators.required],
@@ -49,6 +54,62 @@ export class NuevoAsociadoFormComponent implements OnInit {
       formaPago: ['', Validators.required],
 
     });
+  }
+
+  setAsociado(){
+
+    const newAsociado = new Asociado();
+
+    if (this.firstFormGroup.dirty && this.firstFormGroup.valid) {
+      newAsociado.nombre = this.firstFormGroup.value.nombre;
+      newAsociado.apellido1 = this.firstFormGroup.value.apellido1;
+      newAsociado.apellido2 = this.firstFormGroup.value.apellido2;
+      newAsociado.dni = this.firstFormGroup.value.dni;
+      newAsociado.fechaNacimiento = this.firstFormGroup.value.fechaNacimiento;
+      newAsociado.fechaAlta = this.firstFormGroup.value.fechaAlta;
+      newAsociado.direccion = this.setDireccion();
+      newAsociado.datosMedicos = this.setDatosMedicos();
+      newAsociado.datosBancarios = this.setDatosBancarios();
+      console.log(newAsociado);
+    }
+  }
+
+  setDireccion(): Direccion {
+
+    const direccion = new Direccion();
+    direccion.calle = this.secondFormGroup.value.calle;
+    direccion.numero = this.secondFormGroup.value.numero;
+    direccion.portal = this.secondFormGroup.value.portal;
+    direccion.piso = this.secondFormGroup.value.piso;
+    direccion.letra = this.secondFormGroup.value.letra;
+    direccion.localidad = this.secondFormGroup.value.localidad;
+    direccion.provincia = this.secondFormGroup.value.provincia;
+    direccion.pais = this.secondFormGroup.value.codigoPostal;
+
+    return direccion;
+  }
+
+  setDatosMedicos(): DatosMedicos {
+    const datosMedicos = new DatosMedicos();
+
+    datosMedicos.paciente = this.thirdFormGroup.value.paciente;
+    datosMedicos.enfermedad = this.thirdFormGroup.value.patologia;
+    datosMedicos.fechaDiagnostico = this.thirdFormGroup.value.fechaDiagnostico;
+    datosMedicos.tratamiento = this.thirdFormGroup.value.tratamiento;
+
+    return datosMedicos;
+  }
+
+  setDatosBancarios(): DatosBancarios {
+    const datosBancarios = new DatosBancarios();
+
+    datosBancarios.titular = this.fourthFormGroup.value.titular;
+    datosBancarios.iban = this.fourthFormGroup.value.iban;
+    datosBancarios.modalidadPago = this.fourthFormGroup.value.modalidadPago;
+    datosBancarios.direccionFacturacion = this.setDireccion();
+    datosBancarios.historialFacturacion = [];
+
+    return datosBancarios;
   }
 
 }

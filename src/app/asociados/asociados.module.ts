@@ -22,6 +22,9 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import {ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 @NgModule({
   declarations: [
     PantallaAsociadosComponent,
@@ -46,7 +49,9 @@ import {MatInputModule} from '@angular/material/input';
     MatStepperModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ]
 })
 export class AsociadosModule { }

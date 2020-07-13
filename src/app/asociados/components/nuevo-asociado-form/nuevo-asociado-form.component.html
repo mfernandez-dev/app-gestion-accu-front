@@ -24,7 +24,16 @@
       <br />
       <mat-form-field>
         <mat-label>Fecha Nacimiento</mat-label>
-        <input matInput placeholder="Fecha nacimiento" formControlName="fechaNacimiento" required>
+        <input matInput [matDatepicker]="picker" placeholder="Fecha nacimiento" formControlName="fechaNacimiento" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>Fecha Alta</mat-label>
+        <input matInput [matDatepicker]="picker3" placeholder="Fecha Alta" formControlName="fechaAlta" required>
+        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+        <mat-datepicker #picker3></mat-datepicker>
       </mat-form-field>
       <div>
         <button mat-button matStepperNext>Next</button>
@@ -95,23 +104,16 @@
       <br />
       <mat-form-field>
         <mat-label>Fecha Diagnostico</mat-label>
-        <input matInput placeholder="10-02-1993" formControlName="fechaDiagnostico" required>
+        <input matInput [matDatepicker]="picker2" placeholder="Fecha Diagnostico" formControlName="fechaDiagnostico" required>
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
       </mat-form-field>
       <br />
       <mat-form-field>
         <mat-label>Tratamiento</mat-label>
         <input matInput placeholder="Tratamiento" formControlName="tratamiento" required>
       </mat-form-field>
-      <br />
-      <mat-form-field>
-        <mat-label>Hospital</mat-label>
-        <input matInput placeholder="Hospital" formControlName="hospital" required>
-      </mat-form-field>
-      <br />
-      <mat-form-field>
-        <mat-label>Doctor</mat-label>
-        <input matInput placeholder="Doctor" formControlName="doctor" required>
-      </mat-form-field>
+
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
@@ -135,6 +137,10 @@
         <mat-label>Forma Pago</mat-label>
         <input matInput placeholder="ES00 0000 0000 0000 0000" formControlName="formaPago" required>
       </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
 
     </form>
   </mat-step>
@@ -143,7 +149,7 @@
     <p>You are now done.</p>
     <div>
       <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
+      <button mat-button  type="button" (click)="setAsociado()">Submit</button>
     </div>
   </mat-step>
 </mat-horizontal-stepper>
