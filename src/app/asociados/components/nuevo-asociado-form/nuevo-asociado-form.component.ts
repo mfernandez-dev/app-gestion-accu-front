@@ -26,27 +26,31 @@ export class NuevoAsociadoFormComponent implements OnInit {
     this.firstFormGroup = this.formBuilder.group({
       nombre: ['', Validators.required],
       apellido1: ['', Validators.required],
-      apellido2: ['', Validators.required],
-      dni: ['', Validators.required],
+      apellido2: [''],
+      dni: ['', [Validators.required,
+            Validators.minLength(9),
+            Validators.maxLength(9)]],
       fechaNacimiento: ['', Validators.required],
       fechaAlta: ['', Validators.required]
     });
     this.secondFormGroup = this.formBuilder.group({
       calle: ['', Validators.required],
-      numero: ['', Validators.required],
-      portal: ['', Validators.required],
-      piso: ['', Validators.required],
-      letra: ['', Validators.required],
+      numero: [''],
+      portal: [''],
+      piso: [''],
+      letra: [''],
       localidad: ['', Validators.required],
       provincia: ['', Validators.required],
       pais: ['', Validators.required],
-      codigoPostal: ['', Validators.required],
+      codigoPostal: ['', [Validators.required,
+                          Validators.maxLength(5),
+                          Validators.minLength(5)]],
     });
     this.thirdFormGroup = this.formBuilder.group({
       paciente: ['', Validators.required],
-      patologia: ['', Validators.required],
-      fechaDiagnostico: ['', Validators.required],
-      tratamiento: ['', Validators.required]
+      patologia: [''],
+      fechaDiagnostico: [''],
+      tratamiento: ['']
     });
     this.fourthFormGroup = this.formBuilder.group({
       titularCuenta: ['', Validators.required],
