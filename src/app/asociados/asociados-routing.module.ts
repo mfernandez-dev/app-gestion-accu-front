@@ -4,6 +4,7 @@ import { PantallaAsociadosComponent } from './components/pantalla-asociados/pant
 import { SideBarComponent } from '../layout/components/side-bar/side-bar.component';
 import { PantallaDetallesComponent } from './components/pantalla-detalles/pantalla-detalles.component';
 import { PantallaNuevoAsociadoComponent } from './components/pantalla-nuevo-asociado/pantalla-nuevo-asociado.component';
+import { PantallaEditarAsociadoComponent } from './components/pantalla-editar-asociado/pantalla-editar-asociado.component';
 
 
 const routes: Routes =  [
@@ -24,6 +25,10 @@ const routes: Routes =  [
   {
     path: 'newAsociado',
     component: PantallaNuevoAsociadoComponent,
+  },
+  {
+    path: 'details/:asociadoId/edit',
+    component: PantallaEditarAsociadoComponent,
   },
 ];
 

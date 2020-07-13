@@ -25,6 +25,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { PantallaEditarAsociadoComponent } from './components/pantalla-editar-asociado/pantalla-editar-asociado.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MatSelectModule } from '@angular/material/select';
     HistorialPagosComponent,
     TablaDatosMedicosComponent,
     PantallaNuevoAsociadoComponent,
-    NuevoAsociadoFormComponent
+    NuevoAsociadoFormComponent,
+    PantallaEditarAsociadoComponent
   ],
   imports: [
     CommonModule,
