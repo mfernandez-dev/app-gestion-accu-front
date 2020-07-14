@@ -29,4 +29,8 @@ export class AsociadosService {
   updateAsociado(idAsociado: string, value: any): Observable<Object> {
     return this.http.put(`http://localhost:8080/asociados/${idAsociado}`, value);
   }
+
+  removeAsociado(idAsociado: string): Observable<any> {
+    return this.http.delete(`http://localhost:8080/asociados/${idAsociado}/remove`, {responseType: 'text'});
+  }
 }

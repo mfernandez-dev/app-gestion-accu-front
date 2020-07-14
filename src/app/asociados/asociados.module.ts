@@ -28,6 +28,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { PantallaEditarAsociadoComponent } from './components/pantalla-editar-asociado/pantalla-editar-asociado.component';
 import { EditAsociadoFormComponent } from './components/edit-asociado-form/edit-asociado-form.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponentComponent } from './components/dialog-component/dialog-component.component';
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { MatCardModule } from '@angular/material/card';
     PantallaNuevoAsociadoComponent,
     NuevoAsociadoFormComponent,
     PantallaEditarAsociadoComponent,
-    EditAsociadoFormComponent
+    EditAsociadoFormComponent,
+    DialogComponentComponent
   ],
   imports: [
     CommonModule,
@@ -60,7 +63,8 @@ import { MatCardModule } from '@angular/material/card';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ]
 })
 export class AsociadosModule { }

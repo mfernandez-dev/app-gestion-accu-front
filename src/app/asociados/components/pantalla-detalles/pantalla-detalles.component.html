@@ -8,7 +8,7 @@
   <button class="edit-button" mat-fab color="primary" routerLink='/asociados/details/{{idAsociado}}/edit'>
     <span class="extended-fab-button_text">Editar asociado</span>
   </button>
-  <button class="delete-button" mat-fab color="primary" routerLink='/asociados/remove/{{idAsociado}}'>
+  <button class="delete-button" mat-fab color="primary" (click)="openDialog()">
     <span class="extended-fab-button_text">Borrar asociado</span>
   </button>
 </div>
