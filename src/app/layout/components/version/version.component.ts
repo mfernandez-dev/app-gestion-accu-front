@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./version.component.scss']
 })
 export class VersionComponent implements OnInit {
-  public version = '0.0.1';
+  public version = '0.1.0-ALPHA';
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 {
   "name": "app-gestion-accu-front",
-  "version": "0.0.1",
+  "version": "0.1.0-Alpha",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
