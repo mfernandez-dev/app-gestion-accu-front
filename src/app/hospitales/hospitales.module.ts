@@ -10,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BotonDetallesHospitalComponent } from './components/boton-detalles-hospital/boton-detalles-hospital.component';
 import { PantallaDetalleHospitalComponent } from './components/pantalla-detalle-hospital/pantalla-detalle-hospital.component';
 import { TablaMedicosComponent } from './components/tabla-medicos/tabla-medicos.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { TablaMedicosComponent } from './components/tabla-medicos/tabla-medicos.
     HospitalesRoutingModule,
     MatTableModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatPaginatorModule
   ]
 })
 export class HospitalesModule { }

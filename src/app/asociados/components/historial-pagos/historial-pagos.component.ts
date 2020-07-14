@@ -22,7 +22,8 @@ export class HistorialPagosComponent implements OnInit, OnChanges{
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   ngOnInit(): void {
-
+    this.dataSource = new MatTableDataSource<Factura>(this.facturas);
+    this.dataSource.paginator = this.paginator;
   }
   ngOnChanges(changes: SimpleChanges): void {
     this.dataSource = new MatTableDataSource<Factura>(this.facturas);

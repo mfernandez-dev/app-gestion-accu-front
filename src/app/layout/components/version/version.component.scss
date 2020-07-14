@@ -1,1 +1,11 @@
-
+.version{
+  display: flex;
+  justify-content: flex-start;
+  height: 64%;
+  align-items: flex-end;
+}
+.texto-version{
+  margin-left: 27px;
+  font-size: 1.6vmin;
+  color: gray;
+}
