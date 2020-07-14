@@ -5,7 +5,7 @@
   }
 
 .table-container{
-  border:1px solid black;
+  border:1px solid rgb(128, 128, 128);
   margin-bottom: 1%;
   display: flex;
   border: round($number: 13);
@@ -16,12 +16,16 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  span{
+  padding: 10px
+  }
 }
 
 .title {
   padding-bottom: 2px;
   padding-top: 2px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid lightgray;
+  color: grey;
 }
 
 .element {
@@ -30,7 +34,7 @@
 }
 
 .info-container{
-  width: 30vw;
+  width: 40vw;
 }
 .historial-container{
   padding-left: 1%;

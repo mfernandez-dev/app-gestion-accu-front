@@ -30,6 +30,7 @@ import { EditAsociadoFormComponent } from './components/edit-asociado-form/edit-
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogComponentComponent } from './components/dialog-component/dialog-component.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { DialogComponentComponent } from './components/dialog-component/dialog-c
     MatNativeDateModule,
     MatSelectModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule
   ]
 })
 export class AsociadosModule { }

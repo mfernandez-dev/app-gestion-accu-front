@@ -1,5 +1,5 @@
 
-<form [formGroup]="formularioEdicion" (ngSubmit)="updateAsociado()" class="form-container">
+<form [formGroup]="formularioEdicion" class="form-container">
   <div class="group-1">
     <mat-form-field>
       <mat-label>Nombre</mat-label>
@@ -110,7 +110,7 @@
   </div>
   <div class="buttons-group">
     <button mat-button class="button_back" routerLink='/asociados/details/{{asociado?.asociadoId}}'>Cancel</button>
-    <button mat-button class="button_next" type="submit" routerLink='/asociados'>Submit</button>
+    <button mat-button class="button_next" (click)="updateAsociado()" routerLink='/asociados'>Submit</button>
   </div>
 </form>
 
