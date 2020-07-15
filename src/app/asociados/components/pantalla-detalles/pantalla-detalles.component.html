@@ -1,0 +1,21 @@
+<mat-toolbar class="toolbar-container">
+  <button mat-button class="toolbar-button" routerLink="">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="buttons_container">
+  <button class="edit-button" mat-fab color="primary" routerLink='/details/{{idAsociado}}/edit'>
+    <span class="extended-fab-button_text">Editar asociado</span>
+  </button>
+  <button class="delete-button" mat-fab color="primary" (click)="openDialog()">
+    <span class="extended-fab-button_text">Borrar asociado</span>
+  </button>
+</div>
+
+<div class="main-container">
+  <app-tabla-info-personal [asociado]="asociado"></app-tabla-info-personal>
+  <app-tabla-direccion [direccion]="asociado?.direccion"></app-tabla-direccion>
+  <app-tabla-datos-bancarios [datosBancarios]="asociado?.datosBancarios"></app-tabla-datos-bancarios>
+  <app-tabla-datos-medicos [datosMedicos]="asociado?.datosMedicos"></app-tabla-datos-medicos>
+</div>

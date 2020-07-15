@@ -1,0 +1,24 @@
+.mat-table
+{
+  background-color:transparent!important;
+}
+table {
+  width: 100%;
+  // border: grey solid 1px ;
+  border-collapse: collapse;
+  border-radius: 13px;
+
+
+}
+table tr:last-child td /*To remove the last border*/
+{
+  border-bottom:0 solid
+}
+.table-container{
+  border-radius: 13px;
+  border: grey solid 1px;
+  mat-paginator {
+    background-color: rgba(128, 128, 128, 0);
+    border-top: grey solid 1px;
+  }
+}

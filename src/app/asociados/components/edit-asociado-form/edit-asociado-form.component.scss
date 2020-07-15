@@ -1,0 +1,52 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  .group-1{
+    display: flex;
+    mat-form-field{
+      padding: 1%;
+    }
+  }
+  .group-2{
+    display: flex;
+    mat-form-field{
+      padding: 1%;
+      width: 5%;
+
+    }
+    #calle{
+        width: 29%;
+      }
+  }
+  .group-3{
+    display: flex;
+    mat-form-field{
+      padding: 1%;
+    }
+  }
+
+  .group-4{
+    display: flex;
+    mat-form-field{
+      padding: 1%;
+    }
+  }
+
+  .button_next {
+    padding: 15px 26px;
+    border-radius: 6px;
+    background-color: #AA4CE4;
+    color: white;
+    border: none;
+    margin: 2px;
+  }
+
+  .button_back {
+    background-color: grey;
+    padding: 15px 26px;
+    border-radius: 6px;
+    border: none;
+    margin: 2px
+
+  }
+}

@@ -1,0 +1,20 @@
+.extended-fab-button {
+  width: unset;
+  padding: 15px 26px;
+  border-radius: 6px;
+  background-color: #AA4CE4;
+  display: block;
+  margin: auto;
+  border: none;
+
+  .extended-fab-button_icon {
+    margin-right: 10px;
+  }
+
+  .extended-fab-button_text {
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: white
+  }
+}

@@ -1,0 +1,44 @@
+<table mat-table [dataSource]="dataSource" class="container-table">
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+    <td mat-cell *matCellDef="let asociado">
+      {{asociado.nombre}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="apellidos">
+    <th mat-header-cell *matHeaderCellDef>Apellidos</th>
+    <td mat-cell *matCellDef="let asociado">
+      {{asociado.apellido1}} {{asociado.apellido2}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="dni">
+    <th mat-header-cell *matHeaderCellDef>DNI</th>
+    <td mat-cell *matCellDef="let asociado">
+      {{asociado.dni}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="fechaNacimiento">
+    <th mat-header-cell *matHeaderCellDef>Fecha Nacimiento</th>
+    <td mat-cell *matCellDef="let asociado">
+      {{asociado.fechaNacimiento}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="fechaAlta">
+    <th mat-header-cell *matHeaderCellDef>Fecha Alta</th>
+    <td mat-cell *matCellDef="let asociado">
+      {{asociado.fechaAlta}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="details">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let asociado">
+
+    <app-details-button [asociadoId]="asociado.asociadoId"></app-details-button>
+
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[10]" showFirstLastButtons></mat-paginator>
+

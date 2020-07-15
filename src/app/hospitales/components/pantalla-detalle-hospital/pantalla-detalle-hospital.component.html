@@ -1,0 +1,9 @@
+<mat-toolbar class="toolbar-container">
+  <button mat-button class="toolbar-button" routerLink="/hospitales">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="main-container">
+  <h1 class="mat-display-1">{{hospital?.nombreHospital}}</h1>
+  <app-tabla-medicos [especialistas]="hospital?.especialistas"></app-tabla-medicos>
+</div>

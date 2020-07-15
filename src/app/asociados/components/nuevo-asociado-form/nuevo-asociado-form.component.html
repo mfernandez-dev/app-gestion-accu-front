@@ -1,0 +1,162 @@
+<mat-horizontal-stepper #stepper class="form_container">
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Datos Personales</ng-template>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Nombre" formControlName="nombre" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Primer apellido</mat-label>
+        <input matInput placeholder="Apellido 1" formControlName="apellido1" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Segundo apellido</mat-label>
+        <input matInput placeholder="Apellido 2" formControlName="apellido2">
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>DNI</mat-label>
+        <input matInput placeholder="DNI" formControlName="dni" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Fecha Nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="Fecha nacimiento" formControlName="fechaNacimiento" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>Fecha Alta</mat-label>
+        <input matInput [matDatepicker]="picker3" placeholder="Fecha Alta" formControlName="fechaAlta" required>
+        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+        <mat-datepicker #picker3></mat-datepicker>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext class="button_next">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Direccion</ng-template>
+      <mat-form-field>
+        <mat-label>Calle</mat-label>
+        <input matInput formControlName="calle" placeholder="Calle ejemplo" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Numero</mat-label>
+        <input matInput formControlName="numero" placeholder="1">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Portal</mat-label>
+        <input matInput formControlName="portal" placeholder="A">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Piso</mat-label>
+        <input matInput formControlName="piso" placeholder="1">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Letra</mat-label>
+        <input matInput formControlName="letra" placeholder="A" >
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>Localidad</mat-label>
+        <input matInput formControlName="localidad" placeholder="Localidad" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Provincia</mat-label>
+        <input matInput formControlName="provincia" placeholder="Provincia" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Pais</mat-label>
+        <input matInput formControlName="pais" placeholder="Pais" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>CodigoPostal</mat-label>
+        <input matInput formControlName="codigoPostal" placeholder="00000" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious class="button_back">Back</button>
+        <button mat-button matStepperNext class="button_next">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Datos Medicos</ng-template>
+      <mat-form-field appearance="fill" required>
+        <mat-label>Paciente</mat-label>
+        <mat-select formControlName="paciente" >
+          <mat-option value=true>True</mat-option>
+          <mat-option value=false>False</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Patologia</mat-label>
+        <input matInput placeholder="Crohn" formControlName="patologia">
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Fecha Diagnostico</mat-label>
+        <input matInput [matDatepicker]="picker2" placeholder="Fecha Diagnostico" formControlName="fechaDiagnostico">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Tratamiento</mat-label>
+        <input matInput placeholder="Tratamiento" formControlName="tratamiento">
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperPrevious class="button_back">Back</button>
+        <button mat-button matStepperNext class="button_next">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="fourthFormGroup">
+    <form [formGroup]="fourthFormGroup">
+      <ng-template matStepLabel>Facturacion</ng-template>
+      <mat-form-field>
+        <mat-label>Titular de la cuenta</mat-label>
+        <input matInput placeholder="Nombre Apellido" formControlName="titularCuenta" required>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>IBAN</mat-label>
+        <input matInput placeholder="ES00 0000 0000 0000 0000" formControlName="iban" required>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>Forma Pago</mat-label>
+        <mat-select formControlName="modalidadPago" required>
+          <mat-option value="anual">Anual</mat-option>
+          <mat-option value="mensual">Mensual</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious class="button_back">Back</button>
+        <button mat-button matStepperNext class="button_next">Next</button>
+      </div>
+
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Finalizacion</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious class="button_back">Back</button>
+      <button mat-button class="button_next" type="button" (click)="saveAsociado()" routerLink='/asociados'>Submit</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

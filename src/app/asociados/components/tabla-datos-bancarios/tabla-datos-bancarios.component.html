@@ -1,0 +1,25 @@
+<h1>Datos Facturacion</h1>
+<div class="display-container">
+  <div class="info-container">
+    <div class="table-container">
+      <div class="row-container">
+        <span class="title">Titular</span>
+        <span>{{datosBancarios?.titular}}</span>
+      </div>
+      <div class="row-container">
+        <span class="title">Modalidad de pago</span>
+        <span class="element">{{datosBancarios?.modalidadPago}}</span>
+      </div>
+    </div>
+    <div class="table-container">
+      <div class="row-container">
+        <span class="title">IBAN</span>
+        <span class="element">{{datosBancarios?.iban}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="historial-container">
+    <app-historial-pagos [facturas]="datosBancarios?.historialFacturacion">
+    </app-historial-pagos>
+  </div>
+</div>

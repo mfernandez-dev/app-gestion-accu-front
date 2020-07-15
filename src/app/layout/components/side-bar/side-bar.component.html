@@ -1,0 +1,13 @@
+<mat-drawer-container class="draw-container">
+  <mat-drawer mode="side"
+              opened
+              class="drawer-container__drawer">
+    <app-card-usuario></app-card-usuario>
+    <app-navegation-menu></app-navegation-menu>
+    <app-version></app-version>
+  </mat-drawer>
+  <mat-drawer-content class="drawer-container__content">
+    <app-toolbar></app-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
