@@ -1,11 +1,11 @@
 <mat-toolbar class="toolbar-container">
-  <button mat-button class="toolbar-button" routerLink="/asociados">
+  <button mat-button class="toolbar-button" routerLink="">
     <mat-icon>arrow_back</mat-icon>
   </button>
 </mat-toolbar>
 
 <div class="buttons_container">
-  <button class="edit-button" mat-fab color="primary" routerLink='/asociados/details/{{idAsociado}}/edit'>
+  <button class="edit-button" mat-fab color="primary" routerLink='/details/{{idAsociado}}/edit'>
     <span class="extended-fab-button_text">Editar asociado</span>
   </button>
   <button class="delete-button" mat-fab color="primary" (click)="openDialog()">

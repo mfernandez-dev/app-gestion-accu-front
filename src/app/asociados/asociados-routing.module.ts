@@ -13,9 +13,10 @@ const routes: Routes =  [
     component: SideBarComponent,
     children: [
       {
-        path: '',
+        path: 'asociados',
         component: PantallaAsociadosComponent,
       },
+      {path: '', redirectTo: '/asociados', pathMatch: 'full'}
     ],
   },
   {
